@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# React calendar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a react calendar katas project for the eXalt company build with React and Jest
 
-## Available Scripts
+## How this app is working
 
-In the project directory, you can run:
+It should take a JSON file input in the src folder of the project like below:
 
-### `npm start`
+`react_calendar -> src -> entry.json `
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The JSON structure from the JSON file array must be like below:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```{
+    "id": 1,
+    "start": "17:00",
+    "duration": 60
+}
+```
 
-### `npm test`
+This structure is getting filter inside the convertArray function available in `react_calendar -> src -> functions -> functions.js`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It should output a JSON object array with this structure:
 
-### `npm run build`
+```{
+    id: 1,
+    col: 0,
+    humanStart: "09:30",
+    humanDuration: 30,
+    computerStart: 9.5,
+    computerDuration: 0.5,
+    x: 25, // the position x of the event in screen percent
+    y: 10, // the position y of the event in screen percent
+    width: 25, // the width of the event in screen percent
+    height: 15 // the height of the event in screen percent
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+And rendering on a web browser all the event from the JSON file, this should be between 9am and 9pm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Quick start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### This advices will help you to start the project in a clean environment, you need to :
 
-### `npm run eject`
+    * Have NodeJS installed locally
+    * Clone this repo in your local environment
+    * Open up a terminal and navigate to the project root folder and Write npm install or npm i
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Executing the app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    * Open up a terminal and navigate to the project root folder
+    * write npm start in your terminal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A new window should be open in your web browser
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Executing the tests
 
-## Learn More
+    * Open up a terminal and navigate to the project root folder
+    * write npm run test in your terminal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Clean code usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    * Using the JSDocs synthax for a better reading and coding experience
+    * Using the concept of functions with single responsibility
+    * Favoring the inline return function to have fewer lines of code
+    * Favor a component-oriented code structure
 
-### Code Splitting
+## Reporting issue
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A few event are on the wrong column, the function need to be upgraded

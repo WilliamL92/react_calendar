@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import DateBox from "./components/DateBox";
+import dateData from "./entry.json";
+import { convertArray } from "./functions/functions.js";
 
 function App() {
+  const array = convertArray(dateData) // Converting our JSON file array into a readable JSON array with usefull data
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        array.map(e => {
+          return <DateBox start={e.humanStart} duration={e.humanDuration} key={e.id} id={e.id} y={e.y} height={e.height} x={e.x} width={e.width} />
+        })
+      }
     </div>
   );
 }
