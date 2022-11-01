@@ -41,7 +41,7 @@ And rendering on a web browser all the event from the JSON file, this should be 
 
 ## Quick start
 
-### This advices will help you to start the project in a clean environment, you need to :
+This advices will help you to start the project in a clean environment, you need to :
 
     * Have NodeJS installed locally
     * Clone this repo in your local environment
