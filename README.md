@@ -37,7 +37,7 @@ It should output a JSON object array with this structure:
 }
 ```
 
-And rendering on a web browser all the event from the JSON file, this should be between 9am and 9pm
+And rendering on a web browser all the event from the JSON output array, this should be between 9am and 9pm
 
 ## Quick start
 
