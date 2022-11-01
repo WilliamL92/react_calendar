@@ -8,9 +8,10 @@ It should take a JSON file input in the src folder of the project like below:
 
 `react_calendar -> src -> entry.json `
 
-The JSON structure from the JSON file array must be like below:
+The JSON structure from the JSON file array must be like:
 
-```{
+```
+{
     "id": 1,
     "start": "17:00",
     "duration": 60
@@ -21,7 +22,8 @@ This structure is getting filter inside the convertArray function available in `
 
 It should output a JSON object array with this structure:
 
-```{
+```
+{
     id: 1,
     col: 0,
     humanStart: "09:30",
