@@ -18,7 +18,7 @@ The JSON structure from the JSON file array must be like:
 }
 ```
 
-This structure is getting filter inside the convertArray function available in `react_calendar -> src -> functions -> functions.js`
+This structure is filtered inside the convertArray function available in `react_calendar -> src -> functions -> functions.js`
 
 It should output a JSON object array with this structure:
 
