@@ -4,6 +4,7 @@ import { convertArray } from "./functions/functions.js";
 
 function App() {
   const array = convertArray(dateData) // Converting our JSON file array into a readable JSON array with usefull data
+  console.log(array)
   return (
     <div>
       {

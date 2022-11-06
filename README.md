@@ -69,3 +69,19 @@ A new window should be open in your web browser
 ## Reporting issue
 
 A few event are on the wrong column, the function need to be upgraded
+
+I expect to convert the JSON data into a JSON structure like that:
+
+```
+[
+    [{id: 1}, {id: 3}, {id: 5}],
+    [{id: 2}, {id: 4}, {id: 6}],
+    [{id: 9}, {id: 7}, {id: 8}]
+]
+```
+
+Where we loop over each column to check the corresponding values and replace it if needed
+
+The issue i meet using this approch is that i can't push into the original array because i'm already looping over it, it run the program into an infinite loop
+
+For now i let the original function that i use who give a decent approach while i fix this
