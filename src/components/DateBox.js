@@ -2,7 +2,7 @@ import React from 'react';
 
 const DateBox = (props) => {
     return (
-        <div style={{ border: "solid black 1px", width: `${props.width}vw`, height: `${props.height}vh`, top: `${props.y}vh`, position: "absolute", left: `${props.x}vw`, textAlign: 'center', backgroundColor: "#62C0DE" }}>
+        <div style={{ border: "solid black 1px", width: `${props.width}%`, height: `${props.height}%`, top: `${props.y}%`, position: "absolute", left: `${props.x}%`, textAlign: 'center', backgroundColor: "#62C0DE", opacity: 1 }}>
             {props.id}
         </div>
     );

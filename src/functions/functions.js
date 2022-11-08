@@ -118,7 +118,7 @@ export function convertArray(array) {
         const y = Math.round((newArr[i].computerStart - startValue) * (100 / (endValue - startValue)))
         const height = Math.round(newArr[i].computerDuration * (100 / (endValue - startValue)))
         const x = Math.round(newArr[i].col * (100 / maxCol))
-        const width = Math.round(100 / maxCol)
+        const width = Math.round(100 / (newArr[i].col + 1))
         newArr[i].width = width
         newArr[i].x = x
         newArr[i].height = height

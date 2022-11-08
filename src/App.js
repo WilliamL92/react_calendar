@@ -7,11 +7,13 @@ function App() {
   console.log(array)
   return (
     <div>
-      {
-        array.map(e => {
-          return <DateBox start={e.humanStart} duration={e.humanDuration} key={e.id} id={e.id} y={e.y} height={e.height} x={e.x} width={e.width} />
-        })
-      }
+      <p style={{ position: "absolute", verticalAlign: "top", padding: 0, margin: 0 }}>09:00</p>
+      <div style={{ left: 40, position: "absolute", width: "calc(100% - 40px)", height: "100%" }}>
+        {
+          array.map(e => <DateBox start={e.humanStart} duration={e.humanDuration} key={e.id} id={e.id} y={e.y} height={e.height} x={e.x} width={e.width} />)
+        }
+      </div>
+      <p style={{ position: "absolute", verticalAlign: "bottom", padding: 0, margin: 0, bottom: 0 }}>21:00</p>
     </div>
   );
 }
